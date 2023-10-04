@@ -1,44 +1,25 @@
-//Using Switch Case
+package ISE_Package;
+
 import java.util.Scanner;
  
-public class SimpleCalculator {
-    public static void main(String[] args)
-    {
-        Scanner sc = new Scanner(System.in);
- 
-
-        System.out.print("Enter the first number: ");
-        int firstNumber = sc.nextInt();
-        System.out.print("Enter the second number: ");
-        int secondNumber = sc.nextInt();
- 
-
-        System.out.print("Operation? (+, -, *, /): ");
-        String operation = sc.next();
-        int result = performOperation(firstNumber, secondNumber, operation);
-        System.out.println("Your answer is: " + result);
-    }
- 
-    public static int performOperation(int firstNumber, int secondNumber, String operation)
-    {
-        int result = 0;
-        switch (operation) {
-            case "+":
-                //implement addition
-                break;
-            case "-":
-                //implement subtraction
-                break;
-            case "*":
-                //implement multiplication
-                break;
-            case "/":
-                //implement division
-                break;
-            default:
-                System.out.println("Invalid operation");
-                break;
-        }
-        return result;
-    }
+public class git_Calculator {
+    public static void main(String[] args){
+    	Scanner input = new Scanner(System.in);
+    	System.out.println("Enter 1 to add, 2 to multiply, 3 to exit.");
+    	int operation = input.nextInt();
+    	System.out.println("Enter first integer.");
+    	int x = input.nextInt();
+    	System.out.println("Enter second integer.");
+    	int y = input.nextInt();
+    	
+    	if (operation == 1) {
+    		int result = x + y;
+    		System.out.println("The answer is " + result  );}
+    	else if (operation == 2) {
+    		int result = x * y;
+    		System.out.println("The answer is " + result);}
+    	else {System.out.println("Invalid input");}
+    	//System.out.println(result);}
+    
+    	}
 }
